@@ -3,14 +3,14 @@
 # Teilaufgabe 1a): Datenbereinigung
 
   # Daten einlesen und Speicherung in einem Dataframe
-  loan <- read.csv('loan.csv')
+  loan <- read.csv(file.path("Ressourcen", "loan.csv"))
   
   loan_backup <- loan #Um die ursprünglichen Werte beizubehalten.
   
-  loan <- read.csv('loan.csv',na.strings = c("") ,stringsAsFactors=TRUE ,header=TRUE) #Import mit: 
-                                                                                       #"na.string" um leeren Werten in NA zu ersetzen, 
-                                                                                       #"stringsAsFactors" um Zeichenketten in Faktortypen zu konvertieren,
-                                                                                       #"header" um sich zu versichern, dass R die erste Zeile der Daten als Überschrift verwendet.
+  loan <- read.csv(file.path("Ressourcen", "loan.csv"), na.strings = c(""), stringsAsFactors = TRUE, header = TRUE) #Import mit: 
+                                                                                                                    #"na.string" um leeren Werten in NA zu ersetzen, 
+                                                                                                                    #"stringsAsFactors" um Zeichenketten in Faktortypen zu konvertieren,
+                                                                                                                    #"header" um sich zu versichern, dass R die erste Zeile der Daten als Überschrift verwendet.
   
   head(loan) # Die Funktion "head()" ermöglicht es, einen Überblick über alle Spaltennamen zu erhalten.
   
