@@ -8,8 +8,6 @@
   loan_backup <- loan #Um die ursprünglichen Werte beizubehalten.
   
   loan <- read.csv(file.path("Ressourcen", "loan.csv"), na.strings = c(""), stringsAsFactors = TRUE, header = TRUE) #Import mit: 
-                                                                                                                    #"na.string" um leeren Werten in NA zu ersetzen, 
-                                                                                                                    #"stringsAsFactors" um Zeichenketten in Faktortypen zu konvertieren,
                                                                                                                     #"header" um sich zu versichern, dass R die erste Zeile der Daten als Überschrift verwendet.
   
   head(loan) # Die Funktion "head()" ermöglicht es, einen Überblick über alle Spaltennamen zu erhalten.
@@ -63,41 +61,24 @@
           summary(loan$loan_amnt) #Ergebnis: Damit bekommen wir das Minimum (1500), 1.(12000) sowie 3.(24000) Quartil, Median(16000) und Mittelwert(17609) der Variable loan_amnt.
         
         #Breiter Überblick descriptive Werten
-          install.packages("psych")
+          # Deskriptive statistische Analyse der Spalte "loan_amnt"
           library(psych)
-          describe(loan$loan_amnt) #Ergenis: mit
-                                             #"n"(680) die Anzahl der Beobachtungen,
-                                             #"mean"(17608.6) der Mittelwert,
-                                             #"sd"(8660.21) die Standardabweichung,
-                                             #"median"(16000) der Median,
-                                             #"trimmed"(17178.03) der getrimmte Mittelwert,
-                                             #"mad"(8006.04) die mittlere absolute Abweichung,
-                                             #"min"(1500) das Minimum,
-                                             #"max"(35000) das Maximum,
-                                             #"range"(33500) die Spannweite,
-                                             #"skew"(0.39) die Schiefe,
-                                             #"kurtosis"(-0.57) das Kurtosis,
-                                             #"se"(332.1) der Standardfehler des Mittelwerts.
-        #Die Funktion desc() liefert noch eine erweitere textuelle und auch eine visuelle Beschreibung, mit der man herausfinden kann, ob in der betreffenden Variablen noch fehlende Werte vorhanden sind.
-          install.packages("DescTools")
           library(DescTools)
-          Desc(loan$loan_amnt) #Ergebnis: Zusätzlich zu den Parametern, die bereits mit Hilfe der vorherigen Funktionen beschrieben wurden, kommen hier folgende Parameter hinzu:
-                                  #"unique“ (175), die Anzahl einmalig vorkommender Ausprägungen
-                                  #"lowest" und "highest", die Anzahl der niedrigsten und höchsten Werten am Ende.
-        
+          str(loan$loan_amnt)
+          summary(loan$loan_amnt)
+          describe(loan$loan_amnt)
+          Desc(loan$loan_amnt)
       #Spalte "installment"
         #Struktur Überprüfung
           str(loan$installment) #Ergebnis: numerischer Wert
         #Überblick descriptive Werten
           Desc(loan$installment)
-       
       #Spalte "int_rate"
         #Struktur Überprüfung
           str(loan$int_rate) #Ergebnis: character Wert faktorisiert
         #Überblick descriptive Werten
           Desc(loan$int_rate)
-          
-      #Spalte "funded_amnt"
+     #Spalte "funded_amnt"
         #Struktur Überprüfung
           str(loan$funded_amnt) #Ergebnis: numerischer Wert
         #Überblick descriptive Werten
@@ -128,17 +109,5 @@
       # Ergebnis: Anhand der Ergebnisse lässt sich erkennen, dass die Variable „loan_amnt“ eine sehr starke Korrelation mit den Variablen „installment“ und „funded_amnt“ aufweist.    
           
   #Erstellen Sie danach eine Visualisierung, um zu zeigen für welchen „grade“ die Wahrscheinlichkeit am größten ist, dass der „loan_status“= „Fully Paid“ ist. 
-   ...
-    
   #Erstellen Sie danach eine Visualisierung, um zu zeigen für welchen „prupose“ die Wahrscheinlichkeit am größten ist, dass der „loan_status“= „Charged Off“ ist. 
-    ...    
-    
-#Teilaufgabe 1c: Modellbildung     
-  #...    
-      
-      
-      
-      
-      
-      
-      
+  #Teilaufgabe 1c: Modellbildung
