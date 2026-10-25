@@ -1,27 +1,30 @@
-# WEB78 – Web Scraping and NLP Analysis
+# WEB78 – Data Analysis & Machine Learning with R and Python
 
 ## Project Overview
 
-This repository contains coursework completed as part of the WEB78 module. It includes an R script and Python Jupyter notebooks for web scraping and natural language processing (NLP).
+This repository contains coursework in data analysis and machine learning using R and Python. The assignments cover data cleaning, exploratory data analysis, statistical visualization, correlation analysis, and introductory predictive modeling.
 
-## Project Files
+## Assignments
 
-- `web78_aufgabe_1.R` – R assignment script.
-- `web78_aufgabe_2.ipynb` – Jupyter notebook for assignment 2.
-- `web78_aufgabe_3.ipynb` – Jupyter notebook for assignment 3.
+### 1. Credit Data Analysis with R
+- Data cleaning and missing-value handling
+- Exploratory analysis of loan amounts, interest rates, income, and loan status
+- Histograms, boxplots, descriptive statistics, and correlation analysis
+
+### 2. COVID-19 Data Analysis with Python
+- Data inspection and descriptive statistics using pandas
+- Analysis of confirmed cases, recoveries, and deaths
+- Planned country-level comparisons and date-specific analysis
+
+### 3. Housing Data Analysis and Machine Learning
+- Exploratory data analysis and outlier investigation
+- Correlation matrices and scatter plots
+- Introductory regression modeling with scikit-learn
 
 ## Technologies
 
-- R
-- Python
-- Jupyter Notebook
-- Web Scraping
-- Natural Language Processing (NLP)
+R, Python, pandas, NumPy, matplotlib, scikit-learn, ggplot2, dplyr, Jupyter Notebook.
 
-## How to Use
+## Data Availability
 
-Open the R script in RStudio and the notebooks in Jupyter Notebook. Review the code and execute the relevant sections according to the available dependencies and instructions.
-
-## Purpose
-
-This project documents practical work in data collection, text processing, and data analysis as part of my Data Science learning journey.
+The notebooks expect external CSV datasets that are not included in this repository. The analyses may require additional data files and code corrections before all sections can be executed successfully.
